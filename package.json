@@ -6,6 +6,7 @@
     "dependencies": {
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
+        "ress": "^2.0.4",
         "styled-components": "^5.0.0"
     },
     "scripts": {
@@ -24,10 +25,9 @@
         "lint:fix": "run-p -l -n -c --aggregate-output lint:fix:*"
     },
     "husky": {
-        "hooks":{
+        "hooks": {
             "pre-commit": "yarn run lint"
         }
-
     },
     "eslintConfig": {
         "extends": "react-app"
