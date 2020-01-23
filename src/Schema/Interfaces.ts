@@ -1,12 +1,15 @@
 import { LanguageKeys } from "./LanguageKeys";
 
-type LanguageKey = keyof typeof LanguageKeys;
+export type LanguageKey = keyof typeof LanguageKeys;
 
 export interface i18nMessage {
     title: string;
     description: string;
     msg: {
-        [key in LanguageKey]: string;
+        [key in LanguageKey]: {
+            isMarkdown: boolean;
+            text: string;
+        };
     };
 }
 
