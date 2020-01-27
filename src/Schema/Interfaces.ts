@@ -15,6 +15,9 @@ export interface i18nMessage {
     };
 }
 
-export interface i18nMessages {
-    [uuid: string]: i18nMessage;
+export interface i18nMessageGroup {
+    groupName: string;
+    messages: i18nMessage[];
 }
+
+export interface i18nMessages extends Array<i18nMessageGroup> {}
