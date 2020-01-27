@@ -9,7 +9,10 @@ import { ErrorBoundary } from "./ErrorBoundary";
 import { App } from "./App";
 
 Sentry.init({
-    dsn: "https://668f7f34c78f457e8cc398fa3b447794@sentry.io/1895757",
+    dsn:
+        process.env.NODE_ENV === "production"
+            ? "https://668f7f34c78f457e8cc398fa3b447794@sentry.io/1895757"
+            : "",
     environment: process.env.NODE_ENV
 });
 
