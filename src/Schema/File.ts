@@ -1,6 +1,9 @@
 import { LanguageKey, i18nMessages } from "./Interfaces";
 
-export interface File {
+export const identifier = "international-message-editor-origamium" as const;
+
+export interface i18nFile {
+    identifier: "international-message-editor-origamium";
     projectName: string;
     supporting: {
         [key in LanguageKey]: boolean; // if `true`, enabling language.
