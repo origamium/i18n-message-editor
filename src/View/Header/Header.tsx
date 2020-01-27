@@ -1,12 +1,16 @@
 import React from "react";
-import { AppBar } from "@material-ui/core";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
 
 export interface HeaderProps {
-    projectName: string
+    projectName: string;
 }
 
-export const Header: React.FC<HeaderProps> = props => {
-    return <AppBar>
-        はい
-    </AppBar>
+export const Header: React.FC<HeaderProps> = ({ projectName }) => {
+    return (
+        <AppBar position={"static"}>
+            <Toolbar>
+                <Typography>{projectName}</Typography>
+            </Toolbar>
+        </AppBar>
+    );
 };
